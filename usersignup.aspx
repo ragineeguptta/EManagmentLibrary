@@ -2,9 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container-fluid container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-5">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
@@ -154,8 +154,8 @@
                         <div class="row">
                             <div class="col-8 mx-auto">
                                 <center>
-                                    <div class="form-group mt-4">
-                                        <asp:Button class="btn btn-primary btn-block btn-lg" ID="Button1" runat="server"
+                                    <div class="form-group">
+                                        <asp:Button class="btn btn-primary btn-block btn-lg mt-4" ID="Button1" runat="server"
                                             Text="Update" />
                                     </div>
                                 </center>
@@ -166,7 +166,7 @@
                 <a href="homepage.aspx"><< Back to Home</a><br>
                 <br>
             </div>
-            <%--<div class="col-md-7">
+            <div class="col-md-7">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
@@ -197,7 +197,7 @@
                         </div>
                     </div>
                 </div>
-            </div>--%>
+            </div>
         </div>
     </div>
 </asp:Content>
