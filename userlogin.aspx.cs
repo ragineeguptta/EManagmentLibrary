@@ -30,9 +30,18 @@ namespace EManagmentLibrary
                 }
                 SqlCommand cmd = new SqlCommand("SELECT * FROM member_master_tbl WHERE member_id = '"+ TextBox1.Text.Trim() + "' AND password = '" + TextBox2.Text.Trim() + "'", con);
                 SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
+                if (dr.HasRows)
                 {
-                    Response.Write("<script>alert('"+ dr.GetValue(0).ToString() +"'); </script>");
+                    while (dr.Read())
+                    {
+                        Response.Write("<script>alert('Login Successful')</script>");
+                        Session["username"] = dr.GetValue(0).ToString();
+                        Session["fullname"] = dr.GetValue(1).ToString();
+                        Session["role"] = "user";
+                        Session["status"] = dr.GetValue(10).ToString();
+
+                    }
+                    Response.Redirect("homepage.aspx");
                 }
                 else
                 {
