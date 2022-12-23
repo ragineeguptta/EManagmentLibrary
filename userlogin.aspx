@@ -40,7 +40,7 @@
                                 <div class="mt-4">
                                     <div class="form-group">
                                         <asp:Button class="btn btn-success btn-lg" ID="Button1" runat="server"
-                                            Text="Login" />
+                                            Text="Login" OnClick="Button1_Click" />
                                         <a href="usersignup.aspx">
                                             <input class="btn btn-info btn-lg" style="float:right;" id="Button2" type="button" value="Sign Up" /></a>
                                     </div>
