@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="form-group text-center">
                                     <asp:Button class="btn btn-success btn-block btn-lg mt-4" ID="Button1" runat="server"
-                                        Text="Login" />
+                                        Text="Login" OnClick="Button1_Click" />
                                 </div>
                             </div>
                         </div>
