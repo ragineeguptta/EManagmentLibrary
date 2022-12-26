@@ -13,7 +13,7 @@ namespace EManagmentLibrary
         {
             try
             {
-                if (Session["role"].Equals(""))
+                if (Session["role"] == "")
                 {
                     LinkButton1.Visible = true; // user login link button
                     LinkButton2.Visible = true; // sign up link button
@@ -30,7 +30,7 @@ namespace EManagmentLibrary
                     LinkButton10.Visible = false; // member management link button
 
                 }
-                else if (Session["role"].Equals("user"))
+                else if (Session["role"] == "user")
                 {
                     LinkButton1.Visible = false; // user login link button
                     LinkButton2.Visible = false; // sign up link button
@@ -46,7 +46,7 @@ namespace EManagmentLibrary
                     LinkButton8.Visible = false; // book inventory link button
                     LinkButton9.Visible = false; // book issuing link button
                 }
-                else if (Session["role"].Equals("admin"))
+                else if (Session["role"] == "admin")
                 {
                     LinkButton1.Visible = false; // user login link button
                     LinkButton2.Visible = false; // sign up link button
@@ -135,6 +135,8 @@ namespace EManagmentLibrary
             LinkButton8.Visible = false; // book inventory link button
             LinkButton9.Visible = false; // book issuing link button
             LinkButton10.Visible = false; // member management link button
+
+            Response.Redirect("homepage.aspx");
         }
 
         // view profile
